@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS epytodo;
+
+USE epytodo;
+
+CREATE TABLE IF NOT EXISTS user
+(
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    firstname VARCHAR(255) NOT NULL,
+    created_at datetime NOT NULL DEFAULT NOW(),
+    CONSTRAINT id PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS todo
+(
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    created_at datetime NOT NULL DEFAULT NOW(),
+    due_time datetime NOT NULL,
+    status VARCHAR(255) NOT NULL,
+    user_id BIGINT UNSIGNED NOT NULL,
+    CONSTRAINT t_id PRIMARY KEY (id)
+);

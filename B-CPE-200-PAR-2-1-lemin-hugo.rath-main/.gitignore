@@ -1,0 +1,15 @@
+?
+*.log
+*.pdf
+*.gnca
+*.gcno
+*#
+*~
+*.o
+*.txt
+*.a
+.vscode
+vgcore.*
+test.c
+lem_in
+create_new_anthill/
